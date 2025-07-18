@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>章婷涵 - 作品集 Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+            background-color: #f4f4f5; /* Zinc 100 */
+        }
+        .main-container {
+            max-width: 1280px; /* Wider for professional layout */
+            height: 90vh;
+            max-height: 850px;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+        .nav-link:hover {
+            background-color: #e4e4e7; /* Zinc 200 */
+        }
+        .nav-link.active {
+            background-color: #18181b; /* Zinc 900 */
+            color: white;
+            font-weight: 700;
+        }
+        .content-page {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .content-page.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .content-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .content-scroll::-webkit-scrollbar-track {
+            background: #e4e4e7;
+            border-radius: 3px;
+        }
+        .content-scroll::-webkit-scrollbar-thumb {
+            background: #a1a1aa;
+            border-radius: 3px;
+        }
+        .content-scroll::-webkit-scrollbar-thumb:hover {
+            background: #71717a;
+        }
+        .pro-project-card {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .pro-project-card {
+                grid-template-columns: 1fr;
+            }
+        }
+        .checkmark-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .checkmark-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #22c55e; /* Green 500 */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 bg-zinc-100">
+
+    <div class="main-container w-full bg-white shadow-2xl rounded-2xl flex overflow-hidden">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="w-1/4 md:w-1/5 bg-zinc-50 p-4 md:p-6 border-r border-zinc-200 flex flex-col justify-between">
+            <div>
+                <div class="mb-8">
+                    <h1 class="text-2xl font-bold text-zinc-900">章婷涵</h1>
+                    <p class="text-sm text-zinc-500">Portfolio</p>
+                </div>
+                <nav id="main-nav" class="flex flex-col space-y-2">
+                    <a href="#home" class="nav-link text-zinc-700">首頁</a>
+                    <a href="#professional" class="nav-link text-zinc-700">專業工作經歷</a>
+                    <a href="#academic" class="nav-link text-zinc-700">學術專案與創作</a>
+                    <a href="#tech" class="nav-link text-zinc-700">網站與技術製作</a>
+                </nav>
+            </div>
+            <div class="text-xs text-zinc-400">
+                <p>&copy; 章婷涵</p>
+                <a href="mailto:lory20000912@email.com" class="hover:text-zinc-600">lory20000912@email.com</a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="w-3/4 md:w-4/5 overflow-hidden">
+            <div id="content-area" class="h-full overflow-y-auto content-scroll">
+                
+                <!-- Page: Home -->
+                <div id="home" class="content-page p-6 md:p-12">
+                    <h2 class="text-4xl font-bold text-zinc-800 mb-2">Hello, I'm Ting-Han.</h2>
+                    <p class="text-lg text-zinc-600 mb-8">一位累積了初步實務經驗、正積極拓展專業技能的行銷與企劃實作者</p>
+                    <div class="bg-zinc-100 p-6 rounded-lg mb-8">
+                        <p class="text-zinc-700">
+                            具備專案規劃與社群行銷的實務經驗，曾主導畢業展覽及協助執行商業專案。在過程中熟悉了從前期規劃到細節落實的流程，逐步建立應對變動與解決問題的能力。期望在實務中持續學習，穩定累積行銷與企劃的專業能力。
+                        </p>
+                    </div>
+                    <h3 class="text-2xl font-bold text-zinc-800 mb-4">核心技能</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="bg-sky-100 text-sky-800 text-sm font-medium px-4 py-2 rounded-full">專案規劃與管理</span>
+                        <span class="bg-emerald-100 text-emerald-800 text-sm font-medium px-4 py-2 rounded-full">整合行銷企劃</span>
+                        <span class="bg-rose-100 text-rose-800 text-sm font-medium px-4 py-2 rounded-full">商業開發與溝通</span>
+                        <span class="bg-amber-100 text-amber-800 text-sm font-medium px-4 py-2 rounded-full">社群經營與口碑行銷</span>
+                        <span class="bg-violet-100 text-violet-800 text-sm font-medium px-4 py-2 rounded-full">企劃書與報告撰寫</span>
+                    </div>
+                </div>
+
+                <!-- Page: Professional Experience -->
+                <div id="professional" class="content-page p-6 md:p-12">
+                    <h2 class="text-3xl font-bold text-zinc-800 mb-8">專業工作經歷</h2>
+                    
+                    <!-- Project: B2B System Promotion -->
+                    <div class="pro-project-card mb-12">
+                        <img src="1.png" alt="系統推廣專案示意圖" class="w-full h-auto object-cover rounded-lg shadow-md">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-zinc-700 mb-2">系統推廣專案 (B2B)</h3>
+                            <p class="text-zinc-500 mb-4">目標為推動與多間金融產業的合作，擴大市場影響力。</p>
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg mb-4">
+                                <p class="font-bold text-green-800">主要成效：</p>
+                                <p class="text-green-700">成功推動<span class="font-bold">新光人壽合作案至POC階段</span>，並促成多家金融機構會議洽談。</p>
+                            </div>
+                            <h4 class="font-bold text-zinc-600 mb-2">具體做法：</h4>
+                            <ul class="text-sm text-zinc-600 list-disc list-inside checkmark-list">
+                                <li>擔任主要溝通窗口，促成與多間金融機構會議，展示系統優勢。</li>
+                                <li>主導新光人壽合作案，將專案由初步接觸成功推進至POC（概念性驗證）階段。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project: Community Management -->
+                    <div class="pro-project-card mb-12">
+                        <img src="2.png" alt="社群經營專案示意圖" class="w-full h-auto object-cover rounded-lg shadow-md">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-zinc-700 mb-2">社群經營專案 (B2C)</h3>
+                            <p class="text-zinc-500 mb-4">目標為提升品牌在社群平台的關注度與粉絲互動。</p>
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg mb-4">
+                                <p class="font-bold text-green-800">主要成效：</p>
+                                <p class="text-green-700">執行<span class="font-bold">保發中心</span>貼文規劃，以及<span class="font-bold">雀巢能恩系列奶粉</span>的口碑行銷與社群溝通。</p>
+                            </div>
+                            <h4 class="font-bold text-zinc-600 mb-2">具體做法：</h4>
+                            <ul class="text-sm text-zinc-600 list-disc list-inside checkmark-list">
+                                <li>擔任與保發中心的窗口，設計貼文內容與排程，提升品牌互動率。</li>
+                                <li>執行雀巢社群口碑行銷策略，及時回應粉絲問題，維護良好顧客關係。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Project: Grant Application -->
+                    <div class="pro-project-card">
+                        <img src="3.png" alt="專案補助申請示意圖" class="w-full h-auto object-cover rounded-lg shadow-md">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-zinc-700 mb-2">TWNIC & SIIR 專案補助申請 (B2G)</h3>
+                            <p class="text-zinc-500 mb-4">目標為成功申請政府專案補助，並依計畫執行專案。</p>
+                             <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg mb-4">
+                                <p class="font-bold text-green-800">主要成效：</p>
+                                <p class="text-green-700">兩項補助案皆<span class="font-bold">申請成功</span>，並順利進入期中執行與審核階段。</p>
+                            </div>
+                            <h4 class="font-bold text-zinc-600 mb-2">具體做法：</h4>
+                            <ul class="text-sm text-zinc-600 list-disc list-inside checkmark-list">
+                                <li>撰寫專案企劃書，內容涵蓋市場調研、策略設計、時程規劃與財務規劃。</li>
+                                <li>整合提案內容，確保各項工作順利推進並通過審核。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Page: Academic Projects -->
+                <div id="academic" class="content-page p-6 md:p-12">
+                    <h2 class="text-3xl font-bold text-zinc-800 mb-6">學術專案與創作</h2>
+                    
+                    <!-- Project: 畢業展覽 -->
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-semibold text-zinc-700 mb-4">畢業展覽 | 擔任組長</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="project-card bg-white p-4 rounded-lg border h-full">
+                                <img src="4.png" alt="畢展宣傳活動照片" class="w-full h-32 object-cover rounded-md mb-3">
+                                <h4 class="font-bold">宣傳活動</h4>
+                                <p class="text-sm text-zinc-600">5天內成功與湯姆熊等8家廠商建立合作，活動吸引180+人參與。</p>
+                            </div>
+                            <div class="project-card bg-white p-4 rounded-lg border h-full">
+                                <img src="5.png" alt="畢展校內展照片" class="w-full h-32 object-cover rounded-md mb-3">
+                                <h4 class="font-bold">校內展</h4>
+                                <p class="text-sm text-zinc-600">設計實境解謎並整合AR技術，吸引452位參展者。</p>
+                            </div>
+                            <div class="project-card bg-white p-4 rounded-lg border h-full">
+                                <img src="6.png" alt="畢展校外展照片" class="w-full h-32 object-cover rounded-md mb-3">
+                                <h4 class="font-bold">校外展</h4>
+                                <p class="text-sm text-zinc-600">調整展覽形式，以專業解說傳遞專案核心價值。</p>
+                            </div>
+                            <div class="project-card bg-white p-4 rounded-lg border">
+                                 <a href="https://docs.google.com/document/d/1I3WkQtJZFDE58UU4H0aXYUVfr3hfijWP3n0fYWFZ6q8/edit?tab=t.0" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-sky-600 hover:underline">查看成果報告 &raquo;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: 合作行銷 -->
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-semibold text-zinc-700 mb-4">商業合作案 (在學)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                             <div class="project-card bg-white p-4 rounded-lg border flex items-center gap-4">
+                                <img src="7.png" alt="宴麥森林IG行銷" class="w-24 h-24 object-cover rounded-md">
+                                <div>
+                                    <h4 class="font-bold">宴麥森林-纖來一棒 | IG行銷</h4>
+                                    <p class="text-sm text-zinc-600 mb-2">設計IG濾鏡遊戲，廠商主動購買版權。專案觸及超過1000人。</p>
+                                    <a href="https://docs.google.com/document/d/1MI4M6oe96TXkPNJCvfrHQwWy7BogSh_4hvZSAIpQ404/edit?tab=t.0" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-sky-600 hover:underline">查看企劃書 &raquo;</a>
+                                </div>
+                            </div>
+                            <div class="project-card bg-white p-4 rounded-lg border flex items-center gap-4">
+                                <img src="8.png" alt="高家大腸包小腸Dcard行銷" class="w-24 h-24 object-cover rounded-md">
+                                <div>
+                                    <h4 class="font-bold">高家大腸包小腸 | Dcard行銷</h4>
+                                    <p class="text-sm text-zinc-600 mb-2">口碑操作使店家隔日業績翻倍，文章收藏數破百。</p>
+                                    <a href="https://www.dcard.tw/f/tku/p/240000180?cid=9eec3af0-99a1-4fc0-9df2-6082af70bf8c" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-sky-600 hover:underline">查看Dcard原文 &raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page: Tech Production -->
+                <div id="tech" class="content-page p-6 md:p-12">
+                     <h2 class="text-3xl font-bold text-zinc-800 mb-6">影片與技術製作</h2>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                         <div class="project-card bg-white p-4 rounded-lg border">
+                            <img src="10.png" alt="網站製作" class="w-full h-40 object-cover rounded-md mb-3">
+                            <h4 class="font-bold">網站製作 (Joomla)</h4>
+                            <p class="text-sm text-zinc-600">與組員合作，使用Joomla為品牌建立官方網站。</p>
+                            <a href="https://docs.google.com/presentation/d/1WGVIx7GpZLSRbshyGq6bTPdcA4wC06yDgV_LKZYqiP4/edit?slide=id.gdface97c2b_0_10#slide=id.gdface97c2b_0_10" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-sm font-semibold text-sky-600 hover:underline">查看報告 &raquo;</a>
+                        </div>
+                         <div class="project-card bg-white p-4 rounded-lg border">
+                            <img src="11.png" alt="遊戲製作" class="w-full h-40 object-cover rounded-md mb-3">
+                            <h4 class="font-bold">小遊戲製作 (Unity)</h4>
+                            <p class="text-sm text-zinc-600">使用Unity製作小遊戲。</p>
+                            <a href="https://docs.google.com/presentation/d/1Whdzr4IF_3gc4usX2LDXYlieDrd1bGv-/edit?slide=id.p1#slide=id.p1" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-sm font-semibold text-sky-600 hover:underline">查看報告 &raquo;</a>
+                        </div>
+                     </div>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="project-card bg-white p-4 rounded-lg border h-full">
+                                <img src="12.png" alt="綠幕影片照片" class="w-full h-32 object-cover rounded-md mb-3">
+                                <h4 class="font-bold">綠幕影片</h4>
+                                <p class="text-sm text-zinc-600">綠幕攝影及剪輯。</p>
+                                <a href="https://drive.google.com/file/d/17rwldVZH9p0MNpBrM7FnmfeNl6wV71u5/view" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-sm font-semibold text-sky-600 hover:underline">查看影片 &raquo;</a>
+                            </div>
+                            <div class="project-card bg-white p-4 rounded-lg border h-full">
+                                <img src="13.png" alt="動畫影片照片" class="w-full h-32 object-cover rounded-md mb-3">
+                                <h4 class="font-bold">動畫影片</h4>
+                                <p class="text-sm text-zinc-600">與他人合作製作動畫。</p>
+                                <a href="https://drive.google.com/file/d/14NKv0m7c2JtWGwBTl8AB4v-A4dEWKJ9s/view" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-sm font-semibold text-sky-600 hover:underline">查看影片 &raquo;</a>
+                            </div>
+                            <div class="project-card bg-white p-4 rounded-lg border h-full">
+                                <img src="14.png" alt="動畫-銀杏樹下的約定照片" class="w-full h-32 object-cover rounded-md mb-3">
+                                <h4 class="font-bold">動畫-銀杏樹下的約定</h4>
+                                <p class="text-sm text-zinc-600">與他人合作製作動畫。</p>
+                                <a href="https://drive.google.com/file/d/1gOBHnHLJWsnDVfn6NCowlkCvSyWrc4MC/view" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-sm font-semibold text-sky-600 hover:underline">查看影片 &raquo;</a>
+                            </div>   
+                  </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentPages = document.querySelectorAll('.content-page');
+
+            function showPage(hash) {
+                const targetHash = (hash && document.querySelector(hash)) ? hash : '#home';
+
+                contentPages.forEach(page => {
+                    page.classList.toggle('active', '#' + page.id === targetHash);
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === targetHash);
+                });
+                
+                document.getElementById('content-area').scrollTop = 0;
+            }
+
+            document.getElementById('main-nav').addEventListener('click', function(e) {
+                if (e.target.tagName === 'A' && e.target.classList.contains('nav-link')) {
+                    const targetHref = e.target.getAttribute('href');
+                    // Only prevent default for internal hash links
+                    if (targetHref && targetHref.startsWith('#')) {
+                        e.preventDefault();
+                        if(window.location.hash !== targetHref) {
+                           history.pushState(null, null, targetHref);
+                        }
+                        showPage(targetHref);
+                    }
+                    // For external links (like portfolio.pdf), the default browser action will proceed
+                }
+            });
+            
+            window.addEventListener('popstate', function() {
+                showPage(window.location.hash);
+            });
+
+            showPage(window.location.hash);
+        });
+    </script>
+</body>
+</html>
